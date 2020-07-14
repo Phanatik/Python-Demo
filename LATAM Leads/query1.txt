@@ -1,0 +1,13 @@
+Select cm.createddate, cm.leadorcontactid, c.name, cm.status, cm.country, cm.user_category__c, cm.user_sub_category__c, cm.seniority__c,
+c.id,cm.campaignid,cm.hasoptedoutofemail
+
+From dcd_salesforce.Campaign as c, 
+dcd_salesforce.CampaignMember as cm
+
+where c.id = cm.campaignid and 
+  (c.name like "Spain Virtual%"
+  or c.name like "Digital Week @ LATAM%"
+  or c.name like "LATAM Technology Showcase%"
+  or c.name like "Brasil Digital Week @ LATAM%")
+  
+order by cm.createddate ASC

@@ -1,0 +1,171 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "email": { "type": "string"},
+    "clientid": { "type": "integer" },
+    "eventid": { "type": "integer" },
+    "sourceeventid": { "type": "integer" },
+    "eventuserid": { "type": "integer" },
+    "userstatus": { "type": "string" },
+    "isblocked": { "type": "string" },
+    "engagementscore": { "type": "number" },
+    "liveminutes": { "type": "integer" },
+    "firstliveactivity": { "type": "string", "format": "date-time" },
+    "lastliveactivity": { "type": "string", "format": "date-time" },
+    "archiveminutes": { "type": "integer" },
+    "firstarchiveactivity": { "type": "string", "format": "date-time" },
+    "lastarchiveactivity": { "type": "string", "format": "date-time" },
+    "askedquestions": { "type": "integer" },
+    "resourcesdownloaded": { "type": "integer" },
+    "answeredpolls": { "type": "integer" },
+    "answeredsurveys": { "type": "integer" },
+    "questions": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                    "questionid": { "type": "integer" },
+                    "createtimestamp": { "type": "string", "format": "date-time" },
+                    "content": { "type": "string" },
+                    "answer": { 
+                        "type": "object",
+                        "properties": {
+                            "createtimestamp": { "type": "string", "format": "date-time" },
+                            "content": { "type": "string" },
+                            "presenterid": { "type": "integer" },
+                            "presentername": { "type": "string" },
+                            "privacy": { "type": "string" }
+                            
+                            }
+                        }
+                }
+            }
+        },
+    "polls": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "pollid": { "type": "integer" },
+                "pollsubmittedtimestamp": { "type": "string", "format": "date-time" },
+                "pollquestionid": { "type": "integer" },
+                "pollquestion": { "type": "string" },
+                "pollanswers": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+    "resources": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "resourceid": { "type": "integer" },
+                "resourceviewed": { "type": "string" },
+                "resourceviewedtimestamp": { "type": "string", "format": "date-time" }
+                
+                }
+            }
+        },
+    "surveys": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "surveyid": { "type": "string" },
+                "surveysubmittedtimestamp": { "type": "string", "format": "date-time" },
+                "surveyquestions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "surveyquestionid": { "type": "integer" },
+                            "surveyquestion": { "type": "string" },
+                            "surveyanswers": { 
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                    }
+                                },
+                            "surveyanswersdetail": { 
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "answercode": { "type": "string" },
+                                        "answer": { "type": "string" }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+    "twitterwidget": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "date": { "type": "string", "format": "date-time" },
+                "tweetdescription": { "type": "string" }
+                }
+            }
+        },
+    "calltoactions": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "ctaid": { "type": "integer" },
+                "ctaname": { "type": "string" },
+                "clicks": { "type": "integer" },
+                "date": { "type": "string", "format": "date-time" }
+                }
+            }
+        },
+    "testwidgets": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "testwidgetresult": { "type": "string" },
+                "retries": { "type": "integer" },
+                "correctanswersneeded": { "type": "integer" },
+                "correctanswersprovided": { "type": "integer" }
+                }
+            }
+        },
+    "testwidgetresult": { "type": "string" },
+    "certificationwidgetresult": { "type": "string" },
+    "certificationcredit": { "type": "string" },
+    "certificationtimestamp": { "type": "string", "format": "date-time" },
+    "userprofileurl": { "type": "string" },
+    "campaigncode": { "type": "string" },
+    "sourcecampaigncode": { "type": "string" },
+    "cumulativeliveminutes": { "type": "integer" },
+    "cumulativearchiveminutes": { "type": "integer" },
+    "partnerref": { "type": "string" },
+    "attendancepartnerref": { "type": "string" },
+    "certifications": { 
+        "type": "array",
+        "items": {
+            "type": "object",
+            "properties": {
+                "certificationid": { "type": "integer" },
+                "certificationresult": { "type": "string" },
+                "certificationname": { "type": "string" },
+                "certificationcredit": { "type": "string" },
+                "certificationtimestamp": { "type": "string", "format": "date-time" },
+                "certificationurl": { "type": "string" }
+                }
+            }
+        }
+  }
+}

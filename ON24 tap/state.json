@@ -1,0 +1,16 @@
+{
+  "bookmarks": {
+    "event": {
+      "startdate": "2019-01-01",
+      "lastrun": "2020-06-30"
+    },
+    "registrant": {
+      "startdate": "2019-01-01",
+      "lastrun": "2020-06-30"
+    },
+    "attendee": {
+      "startdate": "2020-07-12",
+      "lastrun": "2020-07-03"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+Select c.name, cm.createddate,cm.user_category__c,
+cm.country, cm.status, cm.leadorcontactid,
+c.id,cm.campaignid,cm.hasoptedoutofemail
+
+From dcd_salesforce.Campaign as c, 
+dcd_salesforce.CampaignMember as cm
+
+where c.id = cm.campaignid and 
+  (c.name like "%LATAM%DCPRO%2020%"
+  or c.name like "%CEEDA%LATAM%2020%"
+  or c.name like "%CHL20%Asset%"
+  or c.name like "%MAD20%Asset%"
+  or c.name like "%MEX20%Asset%"
+  or c.name like "%BRA20%Asset%"
+  or c.name like "%LATAM%2020%Sponsors%")
+  
+order by cm.createddate ASC

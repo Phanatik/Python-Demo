@@ -1,0 +1,89 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "eventid": { "type": "number" },
+    "clientid": { "type": "number" },
+    "goodafter": { "type": "string", "format": "date-time" },
+    "isactive": { "type": "boolean" },
+    "regrequired": { "type": "boolean" },
+    "description": { "type": "string" },
+    "promotionalsummary": { "type": "string" },
+    "regnotificationrequired": { "type": "boolean" },
+    "displaytimezonecd": { "type": "string" },
+    "eventtype": { "type": "string" },
+    "category": { "type": "string" },
+    "createtimestamp": { "type": "string", "format": "date-time" },
+    "localelanguagecd": { "type": "string" },
+    "localecountrycd": { "type": "string" },
+    "lastmodified": { "type": "string", "format": "date-time" },
+    "lastupdated": { "type": "string", "format": "date-time" },
+    "iseliteexpired": { "type": "string" },
+    "application": { "type": "string" },
+    "livestart": { "type": "string", "format": "date-time" },
+    "liveend": { "type": "string", "format": "date-time" },
+    "archivestart": { "type": "string", "format": "date-time" },
+    "archiveend": { "type": "string", "format": "date-time" },
+    "audienceurl": { "type": "string" },
+    "eventprofile": { "type": "string" },
+    "streamtype": { "type": "string" },
+    "audiencekey": { "type": "string" },
+    "extaudienceurl": { "type": "string" },
+    "reporturl": { "type": "string" },
+    "uploadurl": { "type": "string" },
+    "pmurl": { "type": "string" },
+    "previewurl": { "type": "string" },
+    "contenttype": { "type": "string" },
+    "partnerrefstats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": { "type": "string" },
+          "count": { "type": "number" }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "funnelstages": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "speakers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "title": { "type": "string" },
+          "company": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "eventstd1": { "type": "string" },
+    "eventstd2": { "type": "string" },
+    "eventstd3": { "type": "string" },
+    "eventstd4": { "type": "string" },
+    "eventstd5": { "type": "string" },
+    "surveyurls": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "customaccounttags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "groupid": { "type": "number" },
+          "groupname": { "type": "string" },
+          "tagid": { "type": "number" },
+          "tagname": { "type": "string" }
+        }
+      }
+    }
+  }
+}
